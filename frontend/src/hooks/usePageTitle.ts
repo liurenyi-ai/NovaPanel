@@ -22,8 +22,8 @@ export function usePageTitle() {
 
   useEffect(() => {
     const key = TITLE_KEYS[pathname];
-    const title = key ? t(key) : '3X-UI';
+    const title = key ? t(key) : 'Nova Panel';
     const host = window.location.hostname;
-    document.title = host ? `${host} - ${title}` : title;
+    document.title = host ? `Nova Panel - ${title}` : `Nova Panel - ${title}`;
   }, [pathname, t]);
 }

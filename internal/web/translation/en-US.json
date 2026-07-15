@@ -127,8 +127,8 @@
   },
   "pages": {
     "login": {
-      "hello": "Hello",
-      "title": "Welcome",
+      "hello": "Nova Panel",
+      "title": "Private Network Control Center",
       "loginAgain": "Your session has expired, please log in again",
       "toasts": {
         "invalidFormData": "The input data format is invalid.",

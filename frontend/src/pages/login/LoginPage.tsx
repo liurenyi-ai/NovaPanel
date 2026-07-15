@@ -29,7 +29,7 @@ import { setMessageInstance } from '@/utils/messageBus';
 import { pauseAnimationsUntilLeave, useTheme } from '@/hooks/useTheme';
 import { LoginFormSchema, TwoFactorCodeSchema, type LoginFormValues } from '@/schemas/login';
 import './LoginPage.css';
-
+import NovaLogo from '@/components/NovaLogo';
 const HEADLINE_INTERVAL_MS = 2000;
 
 type LoginForm = LoginFormValues;
@@ -175,7 +175,8 @@ export default function LoginPage() {
             ) : (
               <div className="login-card">
                 <div className="brand">
-                  <span className="brand-name">3X-UI</span>
+                  <NovaLogo />
+                  <span className="brand-name">Nova Panel</span>
                   <span className="brand-accent" aria-hidden="true" />
                 </div>
                 <h2 className="welcome">

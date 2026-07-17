@@ -155,7 +155,7 @@
       "xraySwitchClick": "選擇你要切換到的版本",
       "xraySwitchClickDesk": "請謹慎選擇，因為較舊版本可能與當前配置不相容",
       "updatePanel": "更新面板",
-      "panelUpdateDesc": "這將把 3X-UI 更新到最新版本並重新啟動面板服務。",
+      "panelUpdateDesc": "這將把 Nova Panel 更新到最新版本並重新啟動面板服務。",
       "currentPanelVersion": "目前面板版本",
       "latestPanelVersion": "最新面板版本",
       "panelUpToDate": "面板已是最新",

@@ -180,9 +180,9 @@ func (s *EmailService) TestConnection() SMTPTestResult {
 		}
 	}
 
-	msg := buildMessage(from, fromName, recipients, "[3x-ui] Test email",
+	msg := buildMessage(from, fromName, recipients, "[Nova Panel] Test email",
 		`<html><body style="font-family:monospace;font-size:14px">
-<h2>Test email from 3x-ui</h2>
+<h2>Test email from Nova Panel</h2>
 <p>If you received this, SMTP is configured correctly.</p>
 </body></html>`)
 
@@ -247,9 +247,9 @@ func (s *EmailService) sendWithTLS(addr string, auth smtp.Auth, from string, to 
 // SendTest sends a test email and returns any error with detail.
 func (s *EmailService) SendTest() error {
 	return s.Send(
-		"[3x-ui] Test email",
+		"[Nova Panel] Test email",
 		`<html><body style="font-family:monospace;font-size:14px">
-<h2>Test email from 3x-ui</h2>
+<h2>Test email from Nova Panel</h2>
 <p>If you received this, SMTP is configured correctly.</p>
 </body></html>`,
 	)

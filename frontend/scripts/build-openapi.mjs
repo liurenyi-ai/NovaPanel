@@ -11,6 +11,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outPath = join(__dirname, '..', 'public', 'openapi.json');
 
 const PANEL_VERSION = process.env.X_UI_VERSION || '3.x';
+const API_SCHEMAS = JSON.parse(
+  JSON.stringify(SCHEMAS)
+    .replaceAll('3x-ui panel', 'Nova Panel')
+    .replaceAll('3x-ui process', 'Nova Panel process'),
+);
 
 const SECURITY_SCHEMES = {
   bearerAuth: {
@@ -206,17 +211,17 @@ function buildSpec() {
   return {
     openapi: '3.0.3',
     info: {
-      title: '3X-UI Panel API',
+      title: 'Nova Panel API',
       version: PANEL_VERSION,
       description:
-        'Programmatic interface to a 3X-UI panel. Authenticate either by logging in (cookie) or with an API token from Settings → Security → API Token (Bearer). All endpoints under /panel/api/* honour both modes — an API token is a full-admin credential, so treat it like the panel password.',
+        'Programmatic interface to Nova Panel. Authenticate either by logging in (cookie) or with an API token from Settings → Security → API Token (Bearer). All endpoints under /panel/api/* honour both modes — an API token is a full-admin credential, so treat it like the panel password.',
     },
     servers: [
       { url: '/', description: 'Current panel (basePath aware)' },
     ],
     components: {
       securitySchemes: SECURITY_SCHEMES,
-      schemas: SCHEMAS,
+      schemas: API_SCHEMAS,
     },
     security: [{ bearerAuth: [] }, { cookieAuth: [] }],
     tags,

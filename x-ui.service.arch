@@ -1,5 +1,5 @@
 [Unit]
-Description=x-ui Service
+Description=Nova Panel Service
 After=network.target
 Wants=network.target
 

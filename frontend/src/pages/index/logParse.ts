@@ -110,7 +110,7 @@ export function parseLogLine(line: string): ParsedLog {
     service = 'XRAY:';
     body = body.slice('XRAY:'.length).trimStart();
   } else if (body) {
-    service = 'X-UI:';
+    service = 'Nova Panel:';
   }
 
   const stamp = [date, time].filter(Boolean).join(' ');

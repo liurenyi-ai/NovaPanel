@@ -333,7 +333,7 @@ func PrepareSQLiteForMigration(dbPath string) error {
 
 	for _, table := range []string{"users", "settings", "inbounds"} {
 		if !sqliteTableExists(sqlDB, table) {
-			return fmt.Errorf("not a 3x-ui panel database: required table %q is missing", table)
+			return fmt.Errorf("not a Nova Panel database: required table %q is missing", table)
 		}
 	}
 	for _, m := range migrationModels() {

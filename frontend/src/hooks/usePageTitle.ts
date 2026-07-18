@@ -22,8 +22,7 @@ export function usePageTitle() {
 
   useEffect(() => {
     const key = TITLE_KEYS[pathname];
-    const title = key ? t(key) : 'Nova Panel';
-    const host = window.location.hostname;
-    document.title = host ? `Nova Panel - ${title}` : `Nova Panel - ${title}`;
+    const title = key ? t(key) : '';
+    document.title = title ? `Nova Panel · ${title}` : 'Nova Panel';
   }, [pathname, t]);
 }

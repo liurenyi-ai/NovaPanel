@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="nova-hex" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="nova-bolt" x1="24" y1="14" x2="44" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4 55 17v30L32 60 9 47V17L32 4Z" fill="#0B1220" stroke="url(#nova-hex)" stroke-width="4"/>
+  <path d="m38 12-17 25h11l-6 17 19-27H34l4-15Z" fill="url(#nova-bolt)"/>
+</svg>

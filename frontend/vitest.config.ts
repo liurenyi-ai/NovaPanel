@@ -41,7 +41,21 @@ export default defineConfig({
         optimizeDeps: {
           include: ['aria-query', 'lz-string', 'pretty-format', 'dom-accessibility-api'],
         },
-        plugins: [storybookTest({ configDir: path.join(dirname, '.storybook') })],
+        plugins: [
+          storybookTest({ configDir: path.join(dirname, '.storybook') }),
+          {
+            name: 'storybook-unicode-path-fix',
+            enforce: 'post',
+            transform(code, id) {
+              if (id.includes('.stories.')) {
+                return code.replace(
+                  'convertToFilePath(import.meta.url).includes(',
+                  'decodeURIComponent(convertToFilePath(import.meta.url)).includes(',
+                );
+              }
+            },
+          },
+        ],
         test: {
           name: 'storybook',
           browser: {
